@@ -1,8 +1,0 @@
-c:\users\simon\documents\visual studio 15\Projects\BoxApp\BoxApp\obj\Debug\BoxApp.csprojResolveAssemblyReference.cache
-c:\users\simon\documents\visual studio 15\Projects\BoxApp\BoxApp\obj\Debug\BoxApp.Properties.Resources.resources
-c:\users\simon\documents\visual studio 15\Projects\BoxApp\BoxApp\obj\Debug\BoxApp.csproj.GenerateResource.Cache
-c:\users\simon\documents\visual studio 15\Projects\BoxApp\BoxApp\bin\Debug\BoxApp.exe.config
-c:\users\simon\documents\visual studio 15\Projects\BoxApp\BoxApp\bin\Debug\BoxApp.exe
-c:\users\simon\documents\visual studio 15\Projects\BoxApp\BoxApp\bin\Debug\BoxApp.pdb
-c:\users\simon\documents\visual studio 15\Projects\BoxApp\BoxApp\obj\Debug\BoxApp.exe
-c:\users\simon\documents\visual studio 15\Projects\BoxApp\BoxApp\obj\Debug\BoxApp.pdb
