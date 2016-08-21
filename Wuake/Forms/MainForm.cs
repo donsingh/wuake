@@ -13,6 +13,16 @@ namespace Wuake.Forms
 {
     public partial class MainForm : Form
     {
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                var Params = base.CreateParams;
+                Params.ExStyle |= 0x80;
+                return Params;
+            }
+        }
+
         #region Variable Declarations
 
         private readonly double HEIGHT_PERCENTAGE = 0.40;
@@ -54,6 +64,7 @@ namespace Wuake.Forms
             var currentBounds = Screen.FromControl(this).Bounds;
 
             this.FormBorderStyle = FormBorderStyle.None;
+            this.ShowInTaskbar = false;
             this.Width = currentBounds.Width;
             this.Left = 0;
             this.Top = 0;
@@ -155,7 +166,10 @@ namespace Wuake.Forms
                     string command = boxInput.Text;
                     inputWriter.WriteLine(command);
                 }
+                
                 this.boxInput.Clear();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
             }
         }
 
@@ -186,24 +200,17 @@ namespace Wuake.Forms
 
         private void ToggleVisibilityPressed(object sender, KeyPressedEventArgs e)
         {
-            this.Height = 0;
             this.Visible = !this.Visible;
-            if (this.Visible)
-            {
-                this.SlideDown();
-                this.ActiveControl = boxInput;
-            }
         }
 
-        private void SlideDown()
+        private void SlideUp()
         {
-            var currentBounds = Screen.FromControl(this).Bounds;
-            while(this.Height < (int)(currentBounds.Height * HEIGHT_PERCENTAGE))
+            while (this.Height > 0)
             {
-                this.Height = this.Height + 5;
+                this.Height = this.Height - 5;
                 Application.DoEvents();
             }
-            
+
         }
         #endregion
 
